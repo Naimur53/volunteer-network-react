@@ -16,11 +16,13 @@ const useFirebase = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                setLoading(false);
+                console.log(user);
             } else {
                 // User is signed out
                 // ...
             }
+            setLoading(false);
+
         });
 
     }, []);

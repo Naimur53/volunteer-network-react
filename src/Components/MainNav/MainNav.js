@@ -13,8 +13,9 @@ const MainNav = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link as={NavLink} to='/home'>Home</Nav.Link>
-                        <Nav.Link as={NavLink} to='/events'>Events</Nav.Link>
+                        <Nav.Link as={NavLink} activeClassName="text-danger" to='/home'>Home</Nav.Link>
+                        <Nav.Link as={NavLink} activeClassName="text-danger" to='/events'>Events</Nav.Link>
+                        <Nav.Link as={NavLink} activeClassName="text-danger" to='/manageuser'>Manage User</Nav.Link>
                     </Nav>
                     <Nav>
 

@@ -8,6 +8,7 @@ import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Register from './Components/Register/Register';
 import Events from './Components/Events/Events';
+import ManageUser from './Components/ManageUser/ManageUser';
 
 function App() {
   return (
@@ -25,10 +26,13 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/events">
+            <PrivateRoute path="/events">
               <Events></Events>
-            </Route>
-            <PrivateRoute path="/register/:name">
+            </PrivateRoute>
+            <PrivateRoute path="/manageuser">
+              <ManageUser></ManageUser>
+            </PrivateRoute>
+            <PrivateRoute path="/register/:_id">
               <Register></Register>
             </PrivateRoute>
           </Switch>

@@ -5,13 +5,11 @@ const Card = props => {
     const color = ['#BC132B', '#BC1398', '#5E13BC', '#1EB0D6'];
     const history = useHistory();
     const bg = Math.ceil(Math.random() * 3);
-    console.log(bg);
 
-    const { img, name } = props.info;
+    const { img, name, _id } = props.info;
     const handleClick = () => {
-        history.push(`/register/${name}`)
+        history.push(`/register/${_id}`)
     }
-    console.log(props.info);
     return (
         <div onClick={handleClick} className="col">
             <div className="card rounded-3 h-100">

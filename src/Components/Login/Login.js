@@ -13,7 +13,6 @@ const Login = () => {
                 console.log(result.user);
                 setUser(result.user);
                 history.push(url);
-                setLoading(false);
                 // ...
             }).catch((error) => {
                 const errorMessage = error.message;
